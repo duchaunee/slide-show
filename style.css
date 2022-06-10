@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  font-family: 'Poppins';
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* delete style li tags */
+li { 
+    list-style-type: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #111111;
+    display: flex;
+    position: relative;
+}
+
+.wrapper {
+    height: 80%;
+    position: relative;
+    width: 1350px;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px dashed #ffb400;
+}
+
+.header {
+    margin-top: 20px;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 5px;
+    line-height: .7;
+    color: #ffb400;
+}
+
+.header > span {
+    text-transform: uppercase;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    font-weight: 700;
+    transform: translate( -50%, -50%);
+    font-size: 100px;
+    position: absolute;
+    letter-spacing: 10px;
+    color: hsla(0, 0%, 100%, .07);
+}
+
+.header .btn-swap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+}
+
+.btn-swap .text {
+    color: #5b5b5b;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.btn-swap label {
+    cursor: pointer;
+    display: flex; 
+    align-items: center; 
+    border-radius: 30px;
+    width: 70px;
+    height: 30px;
+    position: relative;
+    background-color: #5b5b5b;
+}
+
+.btn-swap label::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    left: 2px;
+    transition: all ease 0.3s;
+    background-color: #222222;
+}
+
+#button-check {
+    display: none;
+}
+
+#button-check:checked ~ label::before {    
+    margin-left: 39px;
+}
+
+.slider {
+    margin-top: 30px;
+    width: 2400px;
+    height: 55%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: flex-end;
+    transition: ease .8s;
+}
+
+.img__slide {
+    margin: 0 10px;
+    cursor: pointer;
+    width: 5%;
+    overflow: hidden;
+    transition: ease .3s;
+}
+
+.img__slide img {
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+/* .img2 {
+    width: 30%;
+    transform: translateY(-132px);
+} */
+
+.img__slide.active {
+    text-align: center;
+    border-radius: 20px;
+    width: 11%;
+}
+
+
+/* .prev,
+.next {
+    --font-size: 75px;
+    position: absolute;
+    top: calc( 50% - var(--font-size) / 2);
+    font-size: var(--font-size);
+    color: #fff;
+    transition: .3s;
+}
+
+.prev {
+    left: -20%;
+}
+
+.next {
+    right: -20%;
+}
+
+.prev:hover,
+.next:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    color: #FF4F45;
+} */
+
+
+.items {
+    flex: 1;
+    margin: 0 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.item {
+    margin: 25px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.item.active {
+    border: 2px solid #ffb400;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all ease .3s;
+}
+
+.item img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.line {
+    position: absolute;
+    bottom: 10px;
+    width: 111.5px;
+    height: 5px;
+    left: 50px;
+    border-radius: 5px;
+    transition: all ease .3s;
+    background-color: #ffb400;
+}
+
+.hide {
+    display: none;
+}
